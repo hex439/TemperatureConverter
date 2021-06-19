@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/app"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="?attr/colorSecondary">
+
+    <!-- Introduction -->
+    <TextView
+        android:id="@+id/setting_intro"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/size_select"
+        android:layout_marginBottom="160dp"
+        android:padding="6dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <!-- Text size selector -->
+    <Spinner
+        android:layout_weight="1"
+        android:id="@+id/spinner_size"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:entries="@array/size"
+        android:layout_marginTop="-155dp"
+        android:gravity="top"/>
+
+    <!-- Save button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_weight="1.5"
+        android:id="@+id/setting_save"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:onClick="saveClicked"
+        android:text="@string/setting_save"
+        android:layout_marginHorizontal="3dp"
+        android:layout_marginVertical="100dp"
+        android:background="@color/white"
+        android:textSize="20sp"
+        tools:ignore="OnClick" />
+
+    <!-- Back button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_weight="1.5"
+        android:id="@+id/button_back"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:onClick="onBackPressed"
+        android:text="@string/setting_back"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="3dp"
+        android:background="@color/white"
+        android:textSize="20sp"
+        tools:ignore="OnClick" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
